@@ -1,0 +1,13 @@
+/* src/index.css */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f5f7fa; /* Matches our App.tsx bg */
+  color: #2d3436;
+}
+
+body {
+  margin: 0;
+  display: block; /* Vite often sets this to 'flex', which causes the centering */
+  min-width: 320px;
+  min-height: 100vh;
+}
