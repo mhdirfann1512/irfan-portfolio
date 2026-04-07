@@ -419,7 +419,11 @@ function App() {
                 role: 'Digital Innovation Team Intern',
                 company: 'Jabatan Hal Ehwal Agama Islam Negeri Sabah',
                 period: '2025',
-                description: '• Developed an interactive dashboard using Looker Studio by collaborating with department stakeholders to gather requirements, design layout, and integrate data.',
+                // Kita buat dalam bentuk array [ ]
+                description: [
+                  'Developed an interactive dashboard using Looker Studio by collaborating with department stakeholders to gather requirements.',
+                  'Designed visual layouts and integrated multiple data sources to ensure real-time accuracy for administrative decision-making.'
+                ],
                 color: '#38bdf8'
               }
             ].map((exp, i) => (
@@ -487,15 +491,33 @@ function App() {
                   </div>
                 </div>
 
-                <p style={{ 
-                  color: '#94a3b8', 
-                  marginTop: '24px', 
-                  lineHeight: 1.8, 
-                  fontSize: '1.1rem', 
+                {/* Gantikan <p>{exp.description}</p> dengan ini: */}
+                <ul style={{ 
+                  padding: 0, 
+                  margin: '24px 0 0 0', 
+                  listStyle: 'none', // Buat custom bullet point supaya lebih cantik
                   maxWidth: '900px'
                 }}>
-                  {exp.description}
-                </p>
+                  {/* Check kalau description itu array, kalau ya kita loop. Kalau string, kita display biasa */}
+                  {Array.isArray(exp.description) ? exp.description.map((point, index) => (
+                    <li key={index} style={{ 
+                      color: '#94a3b8', 
+                      fontSize: '1.1rem', 
+                      lineHeight: 1.8, 
+                      marginBottom: '12px',
+                      display: 'flex',
+                      gap: '12px'
+                    }}>
+                      {/* Bullet point custom guna warna tema syarikat tersebut */}
+                      <span style={{ color: exp.color, fontWeight: 'bold' }}>•</span>
+                      {point}
+                    </li>
+                  )) : (
+                    <li style={{ color: '#94a3b8', fontSize: '1.1rem', lineHeight: 1.8 }}>
+                      {exp.description}
+                    </li>
+                  )}
+                </ul>
 
                 {/* Background Glow Effect - Keep this for that subtle "Dark Mode" premium feel */}
                 <div style={{
