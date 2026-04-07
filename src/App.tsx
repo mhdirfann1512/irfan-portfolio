@@ -409,17 +409,17 @@ function App() {
           <div style={{ display: 'grid', gap: '32px', width: '100%', marginTop: '40px' }}>
             {[
               {
-                role: 'IT Support Intern',
+                role: 'Digital Apprentice',
                 company: 'Jabatan Perkhidmatan Komputer Negeri (JPKN) Sabah',
-                period: '2025',
-                description: 'Maintained critical government IT infrastructure and provided technical troubleshooting for hardware and software systems.',
+                period: '2026',
+                description: 'Planning, managing, and implementing skills development programs, technical training, and employee competency assessments.',
                 color: '#0984e3'
               },
               {
-                role: 'Program Director / Treasurer',
-                company: 'NETCOM Club',
-                period: '2024 — 2025',
-                description: 'Led Cybersecurity Awareness initiatives and managed financial budgeting for technical workshops.',
+                role: 'Digital Innovation Team Intern',
+                company: 'Jabatan Hal Ehwal Agama Islam Negeri Sabah',
+                period: '2025',
+                description: '• Developed an interactive dashboard using Looker Studio by collaborating with department stakeholders to gather requirements, design layout, and integrate data.',
                 color: '#38bdf8'
               }
             ].map((exp, i) => (
