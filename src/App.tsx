@@ -714,9 +714,9 @@ function App() {
       marginBottom: '48px' 
     }}>
       {[
-        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/muhammad-irfan-bin-appri-1b39002b5/', icon: 'linkedin' },
+        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/irfan-appri', icon: 'linkedin' },
         { label: 'GitHub', url: `https://github.com/${GITHUB_USERNAME}`, icon: 'github' },
-        { label: 'Email', url: 'mailto:your.email@example.com', icon: 'gmail' }
+        { label: 'Email', url: 'mailto:your.muhammadirfanappri785@gmail.com', icon: 'gmail' }
       ].map((link) => (
         <a 
           key={link.label}
