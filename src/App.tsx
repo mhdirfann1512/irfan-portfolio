@@ -553,14 +553,14 @@ function App() {
                 degree: 'Bachelor of Computer Science (Hons.) Netcentric Computing',
                 uni: 'Universiti Teknologi MARA (UiTM)',
                 period: '2022 — 2025',
-                courses: ['Distributed Systems', 'Cloud Computing', 'Network Security', 'Web Engineering'],
+                courses: ['Web Development', 'Mobile Development', "Networking", 'Cloud Computing', 'Network Security', 'Web Engineering'],
                 color: '#0984e3'
               },
               {
                 degree: 'Foundation in Engineering',
                 uni: 'Universiti Teknologi MARA (UiTM)',
                 period: '2021 — 2022',
-                courses: ['Advanced Mathematics', 'Physics', 'Computing Essentials'],
+                courses: ['C Programming','Computing Essentials', 'STEM'],
                 color: '#0984e3'
               }
             ].map((edu, i) => (
