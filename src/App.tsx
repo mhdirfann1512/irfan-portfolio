@@ -261,7 +261,7 @@ function App() {
       {/* SKILLS */}
       <section id="skills" style={getSectionStyle(1)}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
-          <SectionHeader title="Technical Arsenal" subtitle="Expertise" color="#38bdf8" />
+          <SectionHeader title="Technical Arsenal" subtitle="Skills" color="#38bdf8" />
           
           <div style={{ 
             display: 'grid', 
@@ -385,7 +385,7 @@ function App() {
       <section id="projects" style={getSectionStyle(2)}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '10px' }}>
-            <SectionHeader title="Featured Work" subtitle="Portfolio" color="#38bdf8" />
+            <SectionHeader title="Featured Work" subtitle="Projects" color="#38bdf8" />
             <a href={`https://github.com/${GITHUB_USERNAME}`} target="_blank" style={{ color: '#38bdf8', fontWeight: 700, textDecoration: 'none', marginBottom: '55px' }}>View GitHub →</a>
           </div>
           <div style={{ 
@@ -424,7 +424,7 @@ function App() {
                   'Developed an interactive dashboard using Looker Studio by collaborating with department stakeholders to gather requirements.',
                   'Designed visual layouts and integrated multiple data sources to ensure real-time accuracy for administrative decision-making.'
                 ],
-                color: '#38bdf8'
+                color: '#0984e3'
               }
             ].map((exp, i) => (
               <div 
