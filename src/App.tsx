@@ -713,51 +713,78 @@ function App() {
       flexWrap: 'wrap',
       marginBottom: '48px' 
     }}>
-      {[
-        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/irfan-appri', icon: 'linkedin' },
-        { label: 'GitHub', url: `https://github.com/${GITHUB_USERNAME}`, icon: 'github' },
-        { label: 'Email', url: 'mailto:muhammadirfanappri785@gmail.com', icon: 'gmail' }
-      ].map((link) => (
-        <a 
-          key={link.label}
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
+    {[
+      { 
+        label: 'LinkedIn', 
+        icon: 'https://img.icons8.com/ios-filled/50/f8fafc/linkedin.png',
+        url: 'https://www.linkedin.com/in/irfan-appri' 
+      },
+      { 
+        label: 'GitHub', 
+        icon: 'https://img.icons8.com/ios-filled/50/f8fafc/github.png',
+        url: `https://github.com/${GITHUB_USERNAME}` 
+      },
+        { 
+        label: 'Email', 
+        icon: 'https://img.icons8.com/ios-filled/50/f8fafc/gmail.png',
+        url: 'https://mail.google.com/mail/?view=cm&fs=1&to=muhammadirfanappri785@gmail.com' 
+      },
+      { 
+        label: 'WhatsApp', 
+        icon: 'https://img.icons8.com/ios-filled/50/f8fafc/whatsapp.png',
+        // Gantikan 60123456789 dengan no fon kau (mesti mula dengan 60)
+        url: 'https://wa.me/60125661512?text=Hi%20Irfan,%20I%20saw%20your%20portfolio...' 
+      }
+
+    ].map((link) => (
+      <a 
+        key={link.label}
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ 
+          color: '#f8fafc', 
+          textDecoration: 'none', 
+          fontWeight: 600, 
+          fontSize: '0.95rem',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          transition: 'all 0.3s ease',
+          padding: '10px 22px',
+          background: 'rgba(255,255,255,0.03)',
+          borderRadius: '12px',
+          border: '1px solid rgba(255,255,255,0.1)',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.color = '#0984e3';
+          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+          e.currentTarget.style.borderColor = '#0984e3';
+          e.currentTarget.style.transform = 'translateY(-3px)';
+          const img = e.currentTarget.querySelector('img');
+          if(img) img.style.filter = 'invert(40%) sepia(90%) saturate(2000%) hue-rotate(190deg)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.color = '#f8fafc';
+          e.currentTarget.style.background = 'rgba(255,255,255,0.03)';
+          e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
+          e.currentTarget.style.transform = 'translateY(0)';
+          const img = e.currentTarget.querySelector('img');
+          if(img) img.style.filter = 'none';
+        }}
+      >
+        <img 
+          src={link.icon} 
+          alt={link.label}
           style={{ 
-            color: '#f8fafc', 
-            textDecoration: 'none', 
-            fontWeight: 600, 
-            fontSize: '0.95rem',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            transition: 'all 0.3s ease',
-            padding: '8px 16px',
-            background: 'rgba(255,255,255,0.03)',
-            borderRadius: '10px',
-            border: '1px solid rgba(255,255,255,0.05)'
+            width: '20px', 
+            height: '20px',
+            transition: 'all 0.3s ease'
           }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.color = '#0984e3';
-            e.currentTarget.style.background = 'rgba(9, 132, 227, 0.1)';
-            e.currentTarget.style.borderColor = 'rgba(9, 132, 227, 0.3)';
-            e.currentTarget.style.transform = 'translateY(-3px)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.color = '#f8fafc';
-            e.currentTarget.style.background = 'rgba(255,255,255,0.03)';
-            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
-            e.currentTarget.style.transform = 'translateY(0)';
-          }}
-        >
-          <img 
-            src={`https://cdn.simpleicons.org/${link.icon}/f8fafc`} 
-            alt={link.label}
-            style={{ width: '18px', height: '18px' }}
-          />
-          {link.label}
-        </a>
-      ))}
+        />
+        {link.label}
+      </a>
+    ))}
     </div>
 
     {/* Bottom Section: Copyright & Tech */}
@@ -765,7 +792,7 @@ function App() {
       paddingTop: '32px', 
       borderTop: '1px solid rgba(255,255,255,0.05)',
       display: 'flex',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
       alignItems: 'center',
       flexWrap: 'wrap',
       gap: '20px',
@@ -774,12 +801,6 @@ function App() {
       <p style={{ margin: 0 }}>
         © {new Date().getFullYear()} • Irfan. All rights reserved.
       </p>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <span style={{ opacity: 0.8 }}>Crafted with</span>
-        <span style={{ color: '#61dafb', fontWeight: 700 }}>React</span>
-        <span style={{ opacity: 0.5 }}>&</span>
-        <span style={{ color: '#3178c6', fontWeight: 700 }}>TypeScript</span>
-      </div>
     </div>
   </div>
 </footer>
